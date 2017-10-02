@@ -24,7 +24,7 @@ WORKDIR /website
 EXPOSE 4567
 EXPOSE 35729
 
-ADD docker/entrypoint.sh /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 

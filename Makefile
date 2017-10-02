@@ -2,8 +2,9 @@ VERSION?=0.1
 
 docker:
 	@echo "==> Building container v${VERSION}..."
-	@docker build \
-		--file "docker/Dockerfile" \
+	@cd docker && \
+	docker build \
+		--file "Dockerfile" \
 		--tag "12factor/middleman-12factor" \
 		--tag "12factor/middleman-12factor:${VERSION}" \
 		--pull \
